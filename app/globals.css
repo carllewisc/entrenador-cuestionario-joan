@@ -1,0 +1,46 @@
+@import "tailwindcss";
+
+:root {
+  --foreground-rgb: 255, 255, 255;
+  --background-rgb: 0, 0, 0;
+}
+
+body {
+  color: rgb(var(--foreground-rgb));
+  background: rgb(var(--background-rgb));
+}
+
+@font-face {
+  font-family: "Serif";
+  src: url("/fonts/serif.woff2") format("woff2");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+.font-serif {
+  font-family: "Times New Roman", serif;
+}
+
+.animate-marquee {
+  display: inline-block;
+  white-space: nowrap;
+  animation: marquee 60s linear infinite;
+  overflow: visible;
+}
+
+@keyframes marquee {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+html,
+body {
+  overflow-y: auto;
+  height: auto;
+  min-height: 100%;
+}
