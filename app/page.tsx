@@ -1,7 +1,13 @@
 import Logo from "@/components/logo"
 import QuestionnaireForm from "@/components/cuestionario-form"
 
+const SHOW_CONTENT = false
+
 export default function Home() {
+  if (!SHOW_CONTENT) {
+    return <main className="min-h-screen bg-white" />
+  }
+
   return (
     <main className="flex flex-col items-center bg-black text-white">
       <div className="w-full max-w-4xl px-4 py-8">
